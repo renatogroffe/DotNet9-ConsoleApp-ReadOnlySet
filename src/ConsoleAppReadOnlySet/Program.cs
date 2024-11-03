@@ -22,8 +22,6 @@ var campeoesMundiais = new HashSet<string>()
 };
 var campeoesMundiaisReadOnly = new ReadOnlySet<string>(campeoesMundiais);
 
-var serializerOptions = new JsonSerializerOptions() { WriteIndented = true };
-
 Console.WriteLine();
 Console.WriteLine("JSON com os dados iniciais - HashSet<string>: ");
 Console.WriteLine(JsonSerializer.Serialize(campeoesMundiais));
@@ -32,6 +30,8 @@ Console.WriteLine();
 Console.WriteLine("ReadOnlySet<string> com valores iniciais: ");
 Console.WriteLine(JsonSerializer.Serialize(campeoesMundiaisReadOnly));
 
+Console.WriteLine();
+Console.WriteLine("Executando alteracoes na instancia de HashSet<string>...");
 campeoesMundiais.Remove("...");
 campeoesMundiais.Remove("????");
 
