@@ -1,5 +1,11 @@
 ﻿using System.Collections.ObjectModel;
+using System.Runtime.InteropServices;
 using System.Text.Json;
+
+Console.WriteLine("***** Testes com .NET 9 | O tipo generico ReadOnlySet<T> *****");
+Console.WriteLine($"Versao do .NET em uso: {RuntimeInformation
+    .FrameworkDescription} - Ambiente: {Environment.MachineName} - Kernel: {Environment
+    .OSVersion.VersionString}");
 
 var campeoesMundiais = new HashSet<string>()
 {
